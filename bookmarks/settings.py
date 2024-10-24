@@ -36,6 +36,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
  
 # Application definition
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+]
+
 INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'django.contrib.admin',
