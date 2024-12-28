@@ -164,6 +164,10 @@ ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda u: reverse_lazy('user_detail', args=[u.username])
 }
 
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 0
+
 if DEBUG:
     import mimetypes
     mimetypes.add_type('application/javascript', '.js', True)
@@ -172,4 +176,4 @@ if DEBUG:
 
 INTERNAL_IPS = [
     '127.0.0.1',
- ]  
+]  
