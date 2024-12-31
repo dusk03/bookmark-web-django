@@ -1,0 +1,152 @@
+/* Import Google Font */
+@import url(//fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap);
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+}
+
+.login-form h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+
+.error-message {
+    color: #de1710;
+    margin-bottom: 15px;
+}
+
+.info-message {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.info-message a {
+    color: #6c7dff;
+    text-decoration: none;
+}
+
+.info-message a:hover {
+    color: #5a67d8;
+}
+
+/* Form */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #6c7dff;
+    background-color: #f1f5ff;
+    outline: none;
+}
+
+.login-form input[type="submit"] {
+    background-color: #6c7dff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #5a67d8;
+}
+
+.password-reset {
+    margin-top: 10px;
+}
+
+.password-reset a {
+    color: #6c7dff;
+    text-decoration: none;
+}
+
+.password-reset a:hover {
+    color: #5a67d8;
+}
+
+/* Social Login */
+.social-login {
+    margin-top: 20px;
+}
+
+.google-login {
+    display: block;
+    background-color: #de1710;
+    color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.google-login:hover {
+    background-color: #c2130a;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-form {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .login-form h1 {
+        font-size: 24px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form input[type="submit"] {
+        font-size: 14px;
+    }
+
+    .google-login {
+        font-size: 14px;
+    }
+}
