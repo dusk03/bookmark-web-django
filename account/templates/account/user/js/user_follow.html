@@ -1,0 +1,36 @@
+
+  const csrftoken = Cookies.get('csrftoken'); // Assuming you use js-cookie to get the CSRF token.
+  const url = "{% url 'user_follow' %}";  // Dynamically inserted URL via Django's URL tag.
+
+  document.querySelector('a.follow').addEventListener('click', function (e) {
+    e.preventDefault();
+    var followButton = this;
+    var formData = new FormData();
+    formData.append('id', followButton.dataset.id);
+    formData.append('action', followButton.dataset.action);
+
+    var options = {
+      method: 'POST',
+      headers: {
+        'X-CSRFToken': csrftoken,
+      },
+      body: formData,
+      mode: 'same-origin',
+    };
+
+    fetch(url, options)
+      .then(response => response.json())
+      .then(data => {
+        if (data['status'] === 'ok') {
+          var previousAction = followButton.dataset.action;
+          var action = previousAction === 'follow' ? 'unfollow' : 'follow';
+          followButton.dataset.action = action;
+          followButton.innerHTML = action;
+          
+          var followerCount = document.querySelector('span.count .total');
+          var totalFollowers = parseInt(followerCount.innerHTML);
+          followerCount.innerHTML = previousAction === 'follow' ? totalFollowers + 1 : totalFollowers - 1;
+        }
+      });
+  });
+
