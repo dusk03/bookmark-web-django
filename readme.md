@@ -2,6 +2,10 @@
 
 This is a Django-based web application for bookmarking images, managing user profiles, and enabling social interactions like following users and liking images.
 
+# Video demo here
+
+[![Video Demo](demo/dashboard.png)](demo/app-demo-vid.mp4)
+
 ## Technologies Used
 
 - **Backend**: Django 4.2, Python 3.11, Redis
@@ -31,6 +35,19 @@ This is a Django-based web application for bookmarking images, managing user pro
   - Activity dashboard
   - Social authentication via Google
   - Admin interface for content management
+
+# Main feature
+
+- CREATE A SHORTCUT
+  ![Windows bookmark](demo/shortcut-bookmark.png)
+- BOOKMARK AN IMAGE ON OTHERS WEBSITE
+  ![Windows bookmark](demo/bookmark-windows.png)
+- WRITE DESCRIPTION AND SAVE IT
+  ![Windows bookmark](demo/create-bookmark.png)
+- FOLLOW
+  ![Windows bookmark](demo/follow.png)
+- LIKE
+  ![Windows bookmark](demo/like.png)
 
 ## Installation
 
