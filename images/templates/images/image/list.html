@@ -1,4 +1,8 @@
 {% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+  <link href="{% static 'css/list-image.css' %}" rel="stylesheet">
+{% endblock %}
 {% block title %}Images bookmarked{% endblock %}
 {% block content %}
     <h1>Images bookmarked</h1>

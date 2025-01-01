@@ -1,0 +1,87 @@
+/* Đảm bảo bố cục phần content */
+#content {
+    padding: 30px;
+    text-align: center;
+}
+
+/* Sử dụng Flexbox cho #image-list */
+#image-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Cho phép các item tự động xuống dòng khi cần */
+    gap: 20px;
+    /* Khoảng cách giữa các item */
+    justify-content: center;
+    /* Căn giữa các item */
+}
+
+/* Thiết lập kiểu cho mỗi thẻ image */
+.image {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    width: 250px;
+    /* Đặt chiều rộng cố định cho mỗi item */
+    height: 350px;
+    /* Đảm bảo chiều cao cố định */
+    display: flex;
+    flex-direction: column;
+    /* Chia nội dung theo chiều dọc */
+    justify-content: space-between;
+    /* Căn đều các phần tử trong mỗi item */
+    margin-bottom: 20px;
+    /* Khoảng cách dưới mỗi ảnh */
+}
+
+/* Hiệu ứng hover cho mỗi ảnh */
+.image:hover {
+    transform: translateY(-10px);
+    /* Hiệu ứng nổi bật khi di chuột */
+}
+
+/* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của thẻ */
+.image a img {
+    width: 100%;
+    height: 100%;
+    /* Điều chỉnh chiều cao của hình ảnh để tránh bị kéo giãn */
+    object-fit: scale-down;
+    /* Đảm bảo ảnh không bị méo, giữ tỷ lệ */
+}
+
+/* Cải thiện phần thông tin dưới ảnh */
+.info {
+    padding: 10px;
+    background-color: #fff;
+    flex-grow: 1;
+    /* Đảm bảo phần thông tin luôn chiếm đầy không gian còn lại */
+    display: flex;
+    align-items: flex-start;
+    /* Căn chỉnh các nội dung bên trong info */
+    justify-content: center;
+}
+
+/* Thiết lập kiểu cho tiêu đề */
+.title {
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Hiệu ứng hover cho tiêu đề */
+.title:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Thêm khoảng cách dưới mỗi phần tử image */
+.image:not(:last-child) {
+    margin-bottom: 20px;
+}
