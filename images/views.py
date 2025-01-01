@@ -120,5 +120,5 @@ def image_ranking(request):
     most_viewed.sort(key=lambda x: image_ranking_ids.index(x.id))
     return render(request,
         'images/image/ranking.html',
-        {'section': 'images', 'most_viewed': most_viewed}
+        {'section': 'ranking', 'most_viewed': most_viewed}
     )
