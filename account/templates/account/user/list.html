@@ -1,6 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
 {% load thumbnail %}
-
+{% block extra_css %}
+  <link href="{% static 'css/list.css' %}" rel="stylesheet">
+{% endblock %}
 {% block title %}People{% endblock title %}
 
 {% block content %}

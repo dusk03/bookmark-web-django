@@ -1,0 +1,59 @@
+/* Căn chỉnh toàn bộ nội dung */
+#content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+/* Container người dùng */
+div.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+/* Hiệu ứng hover cho từng người dùng */
+div.user:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Ảnh người dùng */
+div.user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #5c6bc0;
+    margin-right: 15px;
+}
+
+/* Container thông tin */
+.user .info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tên người dùng */
+.user .info .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho tên */
+.user .info .title:hover {
+    color: #5c6bc0;
+}
+
+/* Responsive cho màn hình nhỏ */
