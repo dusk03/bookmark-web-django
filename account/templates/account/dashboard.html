@@ -1,7 +1,9 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Dashboard{% endblock %}
-
+{% block extra_css %}
+  <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+{% endblock %}
 {% block content %}
     <h1>Dashboard</h1>
     {% with total_images_created=request.user.images_created.count %}

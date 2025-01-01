@@ -63,13 +63,13 @@
 /* Form */
 .login-form input[type="text"],
 .login-form input[type="password"] {
-    width: 100%;
     padding: 12px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #f9f9f9;
     font-size: 14px;
+    width: 92%;
 }
 
 .login-form input[type="text"]:focus,

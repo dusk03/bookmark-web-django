@@ -1,0 +1,107 @@
+/* Căn chỉnh nội dung chính */
+#content {
+    max-width: 800px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+#content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.8rem;
+}
+
+/* Bố cục chi tiết bookmark */
+.detail-bookmark {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Hình ảnh bên trái */
+.image-preview {
+    max-width: 40%;
+    height: auto;
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+/* Form bên phải */
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Nhãn và ô nhập liệu */
+form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng khi focus */
+form input[type="text"]:focus,
+form textarea:focus {
+    border: 1px solid #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Textarea styling */
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Nút submit */
+form input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Responsive chỉnh theo màn hình nhỏ */
+@media (max-width: 768px) {
+    .detail-bookmark {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .image-preview {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+        text-align: center;
+    }
+}

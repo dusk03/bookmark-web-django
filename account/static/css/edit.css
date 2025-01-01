@@ -1,0 +1,122 @@
+/* Đặt phần nội dung chính vào giữa */
+#content {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    /* Căn lề trái cho toàn bộ nội dung */
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+    /* Căn lề trái cho tiêu đề */
+}
+
+/* Mô tả */
+p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+    text-align: left;
+    /* Căn lề trái cho mô tả */
+}
+
+/* Form chỉnh sửa tài khoản */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    /* Căn lề trái cho các phần tử trong form */
+}
+
+/* Các label và input */
+form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    /* Căn lề trái cho label */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="file"],
+form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng khi focus vào input */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="file"]:focus,
+form input[type="date"]:focus {
+    border: 1px solid #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Các checkbox và phần clear ảnh */
+form input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+/* Nút lưu thay đổi */
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    align-self: flex-start;
+    /* Căn lề trái cho nút submit */
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Hiển thị hình ảnh hiện tại với style đẹp hơn */
+form .current-photo {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #007bff;
+    text-align: left;
+}
+
+/* Hiển thị ảnh đại diện (nếu có) */
+form input[type="file"] {
+    margin-top: 10px;
+}
+
+/* Tăng khoảng cách giữa các ô input để dễ dàng thao tác */
+form p {
+    width: 100%;
+}
+
+/* Responsive: đảm bảo giao diện đẹp trên các màn hình nhỏ */
+@media (max-width: 768px) {
+    #content {
+        padding: 15px;
+    }
+
+    form {
+        width: 100%;
+    }
+}

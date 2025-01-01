@@ -1,0 +1,115 @@
+/* Đặt phần nội dung chính vào giữa */
+#content {
+    padding: 30px;
+    text-align: center;
+}
+
+/* Căn giữa thông tin người dùng */
+.profile-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Hình ảnh người dùng */
+.user-detail {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cải thiện phần count (số người theo dõi) */
+.count {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 10px 0;
+}
+
+/* Cải thiện nút Follow */
+a.follow {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a.follow:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Cải thiện phần danh sách hình ảnh */
+#image-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Đảm bảo các ảnh trong mỗi item có kích thước cố định và đẹp mắt */
+.image {
+    width: 300px;
+    height: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng hover cho mỗi ảnh */
+.image:hover {
+    transform: translateY(-10px);
+    /* Nổi bật khi di chuột */
+}
+
+/* Hình ảnh trong các item */
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    /* Giữ tỷ lệ ảnh mà không bị kéo giãn */
+}
+
+/* Thông tin dưới ảnh */
+.info {
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Tiêu đề ảnh */
+.title {
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.title:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Đảm bảo các phần tử hình ảnh không bị lệch */
+.image:not(:last-child) {
+    margin-bottom: 20px;
+}
