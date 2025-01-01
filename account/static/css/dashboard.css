@@ -1,0 +1,112 @@
+/* Container chính */
+#content {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Tiêu đề chính */
+#content h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Phần mô tả */
+#content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Liên kết */
+#content a {
+    color: #5c6bc0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#content a:hover {
+    text-decoration: underline;
+}
+
+/* Khu vực What's happening */
+#content h2 {
+    margin-top: 40px;
+    font-size: 22px;
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Danh sách hành động */
+#action-list {
+    margin-top: 20px;
+}
+
+/* Thông tin từng hành động */
+.action {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ảnh người dùng */
+.action .images {
+    margin-right: 15px;
+}
+
+.action .images img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+/* Thông tin chi tiết */
+.action .info {
+    flex: 1;
+}
+
+.action .info p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.action .info .date {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Responsive: điều chỉnh cho màn hình nhỏ */
+@media (max-width: 480px) {
+    #content {
+        padding: 15px;
+    }
+
+    .action {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .action .images {
+        margin-bottom: 10px;
+    }
+
+    .action .info {
+        text-align: center;
+    }
+}
