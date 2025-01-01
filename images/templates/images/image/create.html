@@ -1,11 +1,18 @@
 {% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+  <link href="{% static 'css/create-bookmark.css' %}" rel="stylesheet">
+{% endblock %}
 {% block title %}Bookmark an image{% endblock %}
 {% block content %}
   <h1>Bookmark an image</h1>
-  <img src="{{ request.GET.url }}" class="image-preview">
-  <form method="post">
-    {{ form.as_p }}
-    {% csrf_token %}
-    <input type="submit" value="Bookmark it!">
-  </form>
+  <div class="detail-bookmark">
+    <img src="{{ request.GET.url }}" class="image-preview">
+    <form method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="submit" value="Bookmark it!">
+    </form>
+  </div>
+  
 {% endblock %}
