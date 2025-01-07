@@ -8,9 +8,9 @@ This is a Django-based web application for bookmarking images, managing user pro
 
 ## Technologies Used
 
-- **Backend**: Django 4.2, Python 3.11, Redis
+- **Backend**: Django 5.x, Python 3.11, Redis
 - **Frontend**: HTML5, CSS3, JavaScript
-- **Database**: PostgreSQL (production), SQLite (development), Redis
+- **Database**: SQLite (development), Redis
 - **Authentication**: Django Auth, Social Auth (Google OAuth2)
 - **Tools**: Git, Pipenv
 
